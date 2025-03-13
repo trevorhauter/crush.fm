@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ambient Music</title>
+    <script src="https://open.spotify.com/embed/iframe-api/v1" async></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+    <script>
+
+      window.onSpotifyIframeApiReady = (IFrameAPI) => {
+        const element = document.getElementById('embed-iframe');
+        const options = {
+          uri: 'spotify:episode:7makk4oTQel546B0PZlDM5'
+        };
+        const callback = (EmbedController) => {};
+        IFrameAPI.createController(element, options, callback);
+      };
+
+    </script>
+  </body>
+</html>
