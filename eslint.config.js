@@ -9,14 +9,8 @@ export default tseslint.config(
   { ignores: ['dist'] },
   {
     extends: [
-      // Remove ...tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
       ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
       ...tseslint.configs.stylisticTypeChecked,
-      reactX.configs.recommended,
-      reactDom.configs.recommended,
     ],
     files: ['**/*.{ts,tsx}'],
     
